@@ -8,13 +8,31 @@ class Operand():
         self.param1 = param1
         self.param2 = param2
         self.param3 = param3
-    # def transform(self, string):
-    #     return f"{self.prefix}_{string}_{self.suffix}"
+   
+    # def func(self):
+    #     # print(self.param1)
+    #     if(str.upper(self.param3) == "PLUS1"):
+    #         return Operand.fnc_plus1(self.param1,self.param2)
+    #     elif(str.upper(self.param3) == "KUADRAT"):
+    #         return Operand.fnc_kuadrat(self.param1,self.param2)
+    #     elif(str.upper(self.param3) == "FIBONACCI"):
+    #         return Operand.fnc_fibonacci(self.param1,self.param2)
+    #     else:
+    #         return None
 
-    def fnc_plus1(self):
-        param1=self.param1
-        param2=self.param2
-        param3=self.param3
+    @staticmethod
+    def func(param1,param2,param3):
+        if(str.upper(param3) == "PLUS1"):
+            return Operand.fnc_plus1(param1,param2)
+        elif(str.upper(param3) == "KUADRAT"):
+            return Operand.fnc_kuadrat(param1,param2)
+        elif(str.upper(param3) == "FIBONACCI"):
+            return Operand.fnc_fibonacci(param1,param2)
+        else:
+            return None
+
+    
+    def fnc_plus1(param1, param2):
         list_plus1=[]
         # list_plus1 = list(range(param1,param2+1)) #CaraCepatPlus1
         for plus in range(param1, param2+1):
@@ -28,10 +46,7 @@ class Operand():
         return list_plus1            
         # print("Plus 1 : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_plus1))
 
-    def fnc_kuadrat(self):
-        param1=self.param1
-        param2=self.param2
-        param3=self.param3
+    def fnc_kuadrat(param1, param2):
         list_exponent=[]
         val_start = param1
         while(param1<=param2):
@@ -41,15 +56,10 @@ class Operand():
             else:
                 list_exponent.append(param1)
                 param1=param1*2
-        # return self.param1, self.param2, self.param3, list_exponent
         # print("Kuadrat : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_exponent))
         return list_exponent
 
-    def fnc_fibonacci(self):
-        param1=self.param1
-        param2=self.param2
-        param3=self.param3
-
+    def fnc_fibonacci(param1, param2):
         list_fbnc=[]
         curr_val = 0
         prev_val = 1
