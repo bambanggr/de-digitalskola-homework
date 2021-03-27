@@ -9,9 +9,7 @@ from operand import Operand
 if __name__ == "__main__":
     # obj_operand = Operand(2,10,'kuadrat')
     # obj_operand = Operand(2,10,'plus1')
-    obj_operand = Operand(2,10,'fibonacci')
-    # obj_operand.fnc_kuadrat()
-    # print(obj_operand)
-    # print(obj_operand.fnc_plus1())
-    # print(obj_operand.fnc_kuadrat())
-    # print(obj_operand.fnc_fibonacci())
+    obj_operand = Operand(2,10,'kuadrat')
+    print(obj_operand.fnc_plus1())
+    print(obj_operand.fnc_kuadrat())
+    print(obj_operand.fnc_fibonacci())

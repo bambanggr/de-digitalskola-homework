@@ -8,15 +8,6 @@ class Operand():
         self.param1 = param1
         self.param2 = param2
         self.param3 = param3
-        if(str.upper(self.param3)=="PLUS1"):
-            Operand.fnc_plus1(self)
-        elif(str.upper(self.param3)=="KUADRAT"):
-            Operand.fnc_kuadrat(self)
-        elif(str.upper(self.param3)=="FIBONACCI"):
-            Operand.fnc_fibonacci(self)
-        else:
-            return "Please input valid function"
-
     # def transform(self, string):
     #     return f"{self.prefix}_{string}_{self.suffix}"
 
@@ -33,8 +24,9 @@ class Operand():
             else:
                 param1=param1+1
                 if(param1<=param2):
-                    list_plus1.append(param1)            
-        print("Plus 1 : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_plus1))
+                    list_plus1.append(param1)
+        return list_plus1            
+        # print("Plus 1 : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_plus1))
 
     def fnc_kuadrat(self):
         param1=self.param1
@@ -49,8 +41,9 @@ class Operand():
             else:
                 list_exponent.append(param1)
                 param1=param1*2
-        # return list_exponent
-        print("Kuadrat : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_exponent))
+        # return self.param1, self.param2, self.param3, list_exponent
+        # print("Kuadrat : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_exponent))
+        return list_exponent
 
     def fnc_fibonacci(self):
         param1=self.param1
@@ -68,5 +61,5 @@ class Operand():
             curr_val=stt+prev_val
             prev_val=stt
             stt=curr_val
-        # return list_fbnc
-        print("Fibonacci : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_fbnc))
+        return list_fbnc
+        # print("Fibonacci : function ({},{},'{}') -> {}".format(self.param1,self.param2,self.param3,list_fbnc))
