@@ -31,12 +31,3 @@ class OperandDefaultTest(unittest.TestCase):
         expected_output = [2, 3, 5, 8]
 
         self.assertEqual(actual_output, expected_output)
-
-
-    # def test_with_argument(self):
-    #     new_instance = StringTransformer("Belajar", "Skola")
-    #     actual_output = new_instance.transform("Python")
-    #     print(actual_output)
-    #     expected_output = "Belajar_Python_Skola"
-
-    #     self.assertEqual(actual_output,expected_output)
