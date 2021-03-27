@@ -8,6 +8,6 @@ from operand import Operand
 
 if __name__ == "__main__":
     obj_operand = Operand()
-    print(obj_operand.func(2,10,'plus1'))
-    print(obj_operand.func(2,10,'KUADRAT'))
-    print(obj_operand.func(2,10,'fiboNacci'))
+    print(obj_operand.func(5,100,'plus1'))
+    print(obj_operand.func(5,100,'KUADRAT'))
+    print(obj_operand.func(43,1000,'fiboNacci'))
