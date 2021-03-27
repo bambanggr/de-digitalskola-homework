@@ -9,17 +9,6 @@ class Operand():
         self.param2 = param2
         self.param3 = param3
    
-    # def func(self):
-    #     # print(self.param1)
-    #     if(str.upper(self.param3) == "PLUS1"):
-    #         return Operand.fnc_plus1(self.param1,self.param2)
-    #     elif(str.upper(self.param3) == "KUADRAT"):
-    #         return Operand.fnc_kuadrat(self.param1,self.param2)
-    #     elif(str.upper(self.param3) == "FIBONACCI"):
-    #         return Operand.fnc_fibonacci(self.param1,self.param2)
-    #     else:
-    #         return None
-
     @staticmethod
     def func(param1,param2,param3):
         if(str.upper(param3) == "PLUS1"):
