@@ -42,15 +42,15 @@ class Operand():
 
     def fnc_kuadrat(param1, param2):
         list_exponent=[]
-        val_start = param1
+        kuadrat_result = 0
+        iteration = 1
         try:
-            while(param1<=param2):
-                if(val_start==param1):
-                    list_exponent.append(param1)
-                    param1=param1*2
-                else:
-                    list_exponent.append(param1)
-                    param1=param1*2
+            while(kuadrat_result<=param2):
+                kuadrat_result=param1**iteration
+                print("Ke {}, Kuadrat: {}".format(iteration, kuadrat_result))
+                if(kuadrat_result<=param2):
+                    list_exponent.append(kuadrat_result)
+                iteration = iteration+1
             return list_exponent
         except TypeError:
             return "Please input valid integer"
